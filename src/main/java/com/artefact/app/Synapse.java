@@ -2,21 +2,26 @@ package com.artefact.app;
 
 public class Synapse {
     private Neuron child;
-    private byte sensitivity;
-    private byte strenght;
+    private byte weight;
 
-    Synapse(Neuron child, byte sensitivity, byte strenght) {
+    Synapse(Neuron child, byte weight) {
         this.child = child;
-        this.sensitivity = sensitivity;
-        this.strenght = strenght;
+        this.weight = weight;
     }
 
-    @Override
-    public String toString() {
-        return "Synapse{" +
-                "child=" + child +
-                ", sensitivity=" + sensitivity +
-                ", strenght=" + strenght +
-                '}';
+    public Neuron getChild() {
+        return child;
+    }
+
+    public void setChild(Neuron child) {
+        this.child = child;
+    }
+
+    public byte getWeight() {
+        return weight;
+    }
+
+    public void setWeight(byte weight) {
+        this.weight = weight;
     }
 }

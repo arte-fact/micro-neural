@@ -3,44 +3,46 @@ package com.artefact.app;
 import java.util.ArrayList;
 
 class Layer {
-    private ArrayList<ArrayList<ArrayList<Neuron>>> matrix;
+    private ArrayList<ArrayList<Neuron>> matrix;
     private Layer child;
 
-    Layer(ArrayList<ArrayList<ArrayList<Neuron>>> matrix) {
+    Layer(ArrayList<ArrayList<Neuron>> matrix) {
         this.matrix = matrix;
     }
 
-    private ArrayList<ArrayList<ArrayList<Neuron>>> getMatrix() {
+    public ArrayList<ArrayList<Neuron>> getMatrix() {
         return matrix;
     }
 
     void setChild(Layer child) {
-        if (child == null) {
+        if (child != null) {
             this.child = child;
         }
     }
 
     private int generateNeuronSynapses(Neuron neuron, Layer childLayer, int parentX, int parentY) {
         int numberOfSynapses = 0;
-        for (ArrayList<ArrayList<Neuron>> column :
-                childLayer.getMatrix()) {
-            for (ArrayList<Neuron> line:
-                    column) {
-                for (Neuron child: line) {
-                    byte sensitivity = 127;
-                    byte strenght = 127;
+        for (ArrayList<Neuron> line :childLayer.getMatrix()) {
+            for (Neuron child: line) {
+                int layerNeurones = (int) Math.pow(2d, this.getMatrix().size());
+                byte weight = (byte) Math.floor(127 / layerNeurones);
 
-                    int childX = column.indexOf(line);
-                    int childY = line.indexOf(child);
+                int childX = childLayer.getMatrix().indexOf(line);
+                int childY = line.indexOf(child);
 
-                    boolean isClose = (Math.ceil((float) childX / 2) == parentX) && (Math.ceil((float) childY / 2) == parentY);
+                parentX++;
+                parentY++;
+                childX++;
+                childY++;
+//
+//                boolean isClose = childX == Math.ceil(parentX/2) && childY == Math.ceil(parentY/2);
+//
+//                if (isClose) {
+//                }
 
-                    if (isClose) {
-                        neuron.addSynapse(child, sensitivity, strenght);
-                        numberOfSynapses++;
-                    }
-
-                }
+                System.out.printf("px %d, py %d, cx %d, cy %d. Weight: %d %n", parentX, parentY, childX, childY, weight);
+                neuron.addSynapse(child, weight);
+                numberOfSynapses++;
             }
         }
         return numberOfSynapses;
@@ -48,21 +50,14 @@ class Layer {
 
     int generateSynapses(Layer childLayer) {
         int numberOfSynapses = 0;
-        for (ArrayList<ArrayList<Neuron>> column :
-                this.getMatrix()) {
-            for (ArrayList<Neuron> line:
-                column) {
-                for (Neuron neuron: line) {
-                    int parentX = column.indexOf(line);
-                    int parentY = line.indexOf(neuron);
+        for (ArrayList<Neuron> line: this.matrix) {
+            for (Neuron neuron: line) {
+                int parentX = this.matrix.indexOf(line);
+                int parentY = line.indexOf(neuron);
 
-                    numberOfSynapses += generateNeuronSynapses(neuron, childLayer, parentX, parentY);
-
-
-                }
+                numberOfSynapses += generateNeuronSynapses(neuron, childLayer, parentX, parentY);
             }
         }
-
         return numberOfSynapses;
     }
 }

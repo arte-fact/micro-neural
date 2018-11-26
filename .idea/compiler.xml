@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="micro-neural" target="1.5" />
+      <module name="micro-neural" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
