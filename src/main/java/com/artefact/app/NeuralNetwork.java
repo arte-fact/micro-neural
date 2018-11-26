@@ -13,8 +13,8 @@ class NeuralNetwork {
 
         int totalNeuronNumber = 0;
         int totalSynapseNumber = 0;
-        ArrayList<ArrayList<ArrayList<Neuron>>> matrix = new ArrayList<>();
-        ArrayList<Layer> layers = new ArrayList<>();
+        ArrayList<ArrayList<ArrayList<Neuron>>> matrix = new ArrayList();
+        ArrayList<Layer> layers = new ArrayList();
         int inputSize = height * width;
         Layer lastLayer = null;
 
@@ -22,12 +22,12 @@ class NeuralNetwork {
         int i = 0;
         while (i < numberOfLayer) {
             int j = 0;
-            ArrayList<ArrayList<Neuron>> column = new ArrayList<>();
+            ArrayList<ArrayList<Neuron>> column = new ArrayList();
             matrix.add(column);
 
             while (j < height) {
                 int k = 0;
-                ArrayList<Neuron> line = new ArrayList<>();
+                ArrayList<Neuron> line = new ArrayList();
                 column.add(line);
 
                 while (k < width) {

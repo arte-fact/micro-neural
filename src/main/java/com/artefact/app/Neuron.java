@@ -12,7 +12,7 @@ class Neuron {
         this.charge = charge;
         this.sensitivity = sensitivity;
         this.strengh = strength;
-        synapses = new ArrayList<>();
+        synapses = new ArrayList<Synapse>();
     }
 
     void addSynapse(Neuron child, byte strength, byte sensitivity) {
