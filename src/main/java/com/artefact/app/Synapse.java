@@ -2,11 +2,22 @@ package com.artefact.app;
 
 public class Synapse {
     private Neuron child;
+
+    public Neuron getParent() {
+        return parent;
+    }
+
+    public void setParent(Neuron parent) {
+        this.parent = parent;
+    }
+
+    private Neuron parent;
     private byte weight;
 
-    Synapse(Neuron child, byte weight) {
+    Synapse(Neuron child, Neuron parent, byte weight) {
         this.child = child;
         this.weight = weight;
+        this.parent = parent;
     }
 
     public Neuron getChild() {

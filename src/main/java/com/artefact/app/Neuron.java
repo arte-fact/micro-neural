@@ -5,12 +5,23 @@ import java.util.ArrayList;
 class Neuron {
     private byte charge;
     private byte sensitivity;
-    private ArrayList<Synapse> synapses;
+    private ArrayList<Synapse> childs;
+    private ArrayList<Synapse> parents;
+
+
+    public ArrayList<Synapse> getParents() {
+        return parents;
+    }
+
+    public void setParents(ArrayList<Synapse> parents) {
+        this.parents = parents;
+    }
 
     Neuron(byte charge, byte sensitivity) {
         this.charge = charge;
         this.sensitivity = sensitivity;
-        synapses = new ArrayList<Synapse>();
+        childs = new ArrayList<Synapse>();
+        parents = new ArrayList<Synapse>();
     }
 
     public void setCharge(byte charge) {
@@ -21,8 +32,8 @@ class Neuron {
         this.sensitivity = sensitivity;
     }
 
-    public void setSynapses(ArrayList<Synapse> synapses) {
-        this.synapses = synapses;
+    public void setChilds(ArrayList<Synapse> childs) {
+        this.childs = childs;
     }
 
     public byte getCharge() {
@@ -41,23 +52,31 @@ class Neuron {
         }
     }
 
-    public void burst () {
-        System.out.printf("| %d |", this.charge);
-
+    public boolean burst () {
+//        System.out.printf("| %d |", this.charge);
+        Boolean activation = false;
         if (this.charge > this.sensitivity) {
-            for (Synapse synapse: this.synapses) {
+            for (Synapse synapse: this.childs) {
                 Neuron child = synapse.getChild();
                 child.addCharge((byte) (this.charge * synapse.getWeight() / 127));
+                activation = true;
             }
         }
         this.charge = (byte) 0;
+        return activation;
     }
 
-    public ArrayList<Synapse> getSynapses() {
-        return synapses;
+    public ArrayList<Synapse> getChilds() {
+        return childs;
     }
 
-    void addSynapse(Neuron child, byte strength) {
-        this.synapses.add(new Synapse(child, strength));
+    public void addParent(Synapse synapse) {
+        this.parents.add(synapse);
+    }
+
+    public Synapse addChild(Neuron child) {
+        Synapse synapse = new Synapse(child, this, Utils.randomByte(127));
+        this.childs.add(synapse);
+        return synapse;
     }
 }

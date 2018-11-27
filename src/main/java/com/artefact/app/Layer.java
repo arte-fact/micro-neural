@@ -25,7 +25,7 @@ class Layer {
         for (ArrayList<Neuron> line :childLayer.getMatrix()) {
             for (Neuron child: line) {
                 int layerNeurones = (int) Math.pow(2d, this.getMatrix().size());
-                byte weight = (byte) Math.floor(127 / layerNeurones);
+                byte weight = (byte) 1;
 
                 int childX = childLayer.getMatrix().indexOf(line);
                 int childY = line.indexOf(child);
@@ -40,8 +40,10 @@ class Layer {
 //                if (isClose) {
 //                }
 
-                System.out.printf("px %d, py %d, cx %d, cy %d. Weight: %d %n", parentX, parentY, childX, childY, weight);
-                neuron.addSynapse(child, weight);
+                Synapse synapse = neuron.addChild(child);
+                child.addParent(synapse);
+                System.out.printf("Synapse %d(%d,%d,%d,%d) Weight: %d %n", numberOfSynapses, parentX, parentY, childX, childY, weight);
+                System.out.printf("Parent: %s, Child, %s.%n", synapse.getChild(), synapse.getParent());
                 numberOfSynapses++;
             }
         }

@@ -61,12 +61,17 @@ class NeuralNetwork {
         System.out.printf("Output size: %d neurons %n", width * height);
     }
 
-    public byte burst () {
+    public boolean burst (boolean expectation, boolean randomized) {
         byte charge = 0;
         for (ArrayList<Neuron> line: layers.get(0).getMatrix()) {
             for (Neuron neuron: line) {
-                neuron.setCharge(charge);
-                charge += 8;
+                if (!randomized) {
+                    neuron.setCharge(charge);
+                    charge += 8;
+                } else {
+                    charge = Utils.randomByte(127);
+                    neuron.setCharge(charge);
+                }
             }
         }
 
@@ -74,10 +79,25 @@ class NeuralNetwork {
             for (ArrayList<Neuron> line: layer.getMatrix()) {
                 for (Neuron neuron: line) {
                     neuron.burst();
+
+                    if (neuron.getCharge() < 1) {
+                        for (Synapse synapse: neuron.getParents()) {
+                            byte parentCharge = synapse.getParent().getCharge();
+                            if (parentCharge < 127 && expectation || parentCharge < 100) {
+                                for (Synapse parentSynapse: synapse.getParent().getChilds()) {
+                                    parentSynapse.setWeight((byte) (parentSynapse.getWeight() + 1));
+                                }
+                            } else if (parentCharge > 1){
+                                for (Synapse parentSynapse: synapse.getParent().getChilds()) {
+                                    parentSynapse.setWeight((byte) (parentSynapse.getWeight() - 1));
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            System.out.printf("%n");
+//            System.out.printf("%n");
         }
-        return (byte) 0;
+        return layers.get(layers.size() - 1).getMatrix().get(layers.get(layers.size() - 1).getMatrix().size() - 1).get(0).getCharge() > 100;
     }
 }
