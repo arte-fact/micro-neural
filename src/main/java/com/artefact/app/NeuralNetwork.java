@@ -89,17 +89,11 @@ class NeuralNetwork {
         return error;
     }
 
-    public void applyCorrections () {
-        Neuron outputNeuron = this.layers.get(this.layers.size() - 1).getNeurons().get(0);
-        for (Synapse synapse: outputNeuron.getParents()) {
-            synapse.applyCorrection();
-        }
-
-        for (Neuron neuron: layers.get(1).getNeurons()) {
+    public void applyCorrections (int layerIndex) {
+        Layer layer = this.layers.get(layerIndex);
+        for (Neuron neuron: layer.getNeurons()) {
             for (Synapse synapse: neuron.getParents()) {
-                if (synapse.getBatchSize() != 0) {
-                    synapse.applyCorrection();
-                }
+                synapse.applyCorrection();
             }
         }
     }

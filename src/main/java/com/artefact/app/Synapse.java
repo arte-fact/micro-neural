@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Synapse {
     private Neuron child;
 
-    private int batchSize = 0;
+    private int batchSize = 1;
 
     public int getBatchSize() {
         return batchSize;
@@ -19,11 +19,12 @@ public class Synapse {
     }
 
     public void applyCorrection() {
-        int correction = (int) Math.floor(this.batchCorrectionSum / (this.batchSize));
+        int correction = (int) Math.floor(this.batchCorrectionSum / this.batchSize);
         this.weight += Math.floor(correction);
         for(Synapse parentSynapse: this.getParent().getParents()) {
-            if (parentSynapse.parent.getCharge() > 100) {
+            if (parentSynapse.parent.getCharge() > parentSynapse.parent.getSensitivity()) {
                 parentSynapse.addCorrection(correction);
+//                parentSynapse.parent.setSensitivity((byte) (parentSynapse.parent.getSensitivity() - correction));
             }
         }
     }

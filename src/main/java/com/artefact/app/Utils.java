@@ -8,13 +8,23 @@ public class Utils {
     }
 
 
-    public static double calculateAverage(ArrayList<Byte> marks) {
+    public static double calculateByteAverage(ArrayList<Byte> values) {
         Integer sum = 0;
-        if (!marks.isEmpty()) {
-            for (Byte mark : marks) {
-                sum += mark;
+        if (!values.isEmpty()) {
+            for (Byte value : values) {
+                sum += value;
             }
-            return sum.doubleValue() / marks.size();
+            return sum.doubleValue() / values.size();
+        }
+        return sum;
+    }
+    public static double calculateIntAverage(ArrayList<Integer> values) {
+        Integer sum = 0;
+        if (!values.isEmpty()) {
+            for (Integer value : values) {
+                sum += value;
+            }
+            return sum.doubleValue() / values.size();
         }
         return sum;
     }
