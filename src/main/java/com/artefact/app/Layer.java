@@ -17,7 +17,7 @@ class Layer {
         int numberOfSynapses = 0;
         for (Neuron neuron: parentLayer.getNeurons()) {
             for (Neuron parentNeuron: this.getNeurons()) {
-                parentNeuron.connectChild(neuron, Utils.randomByte(Math.floorDiv(127, this.neurons.size())));
+                parentNeuron.connectChild(neuron, (double) (Math.random() * 127));
                 numberOfSynapses++;
             }
         }

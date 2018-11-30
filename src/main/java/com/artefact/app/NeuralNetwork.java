@@ -11,9 +11,6 @@ class NeuralNetwork {
 
     NeuralNetwork(ArrayList<Integer> layerSizes) {
 
-        byte neuronCharge = 0;
-        byte sensitivity = 100;
-
         layers = new ArrayList();
         int totalNeuronNumber = 0;
         int totalSynapseNumber = 0;
@@ -25,7 +22,7 @@ class NeuralNetwork {
 
             ArrayList<Neuron> neuronLayer = new ArrayList();
             for (int i = 0; i < layerSize; i++) {
-                Neuron neuron = new Neuron(neuronCharge, sensitivity);
+                Neuron neuron = new Neuron();
                 neuronLayer.add(neuron);
                 neuronNumber++;
             }
@@ -55,7 +52,10 @@ class NeuralNetwork {
     public byte burst (boolean expectation, boolean randomized) {
         byte error = 0;
         byte charge = 0;
-        for (Neuron neuron: this.layers.get(0).getNeurons()) {
+        ArrayList<Neuron> neurons = this.layers.get(0).getNeurons();
+
+        for (int i = 0, neuronsSize = neurons.size(); i < neuronsSize; i++) {
+            Neuron neuron = neurons.get(i);
             if (!randomized) {
                 charge += 8;
                 neuron.setCharge(charge);
@@ -65,27 +65,41 @@ class NeuralNetwork {
             }
         }
 
-        for (Layer layer: this.layers) {
-            for (Neuron neuron: layer.getNeurons()) {
-                neuron.burst();
+        int layerIndex = this.layers.size() - 1;
+        while (layerIndex >  -1) {
+            int neuronIndex = this.layers.get(layerIndex).getNeurons().size() - 1;
+            while (neuronIndex > -1) {
+                this.layers.get(layerIndex).getNeurons().get(neuronIndex).activation();
+                neuronIndex--;
             }
+            layerIndex--;
         }
 
-        Neuron outputNeuron = this.layers.get(this.layers.size() - 1).getNeurons().get(0);
 
-        for (Synapse synapse: outputNeuron.getParents()) {
-            if (outputNeuron.getCharge() < outputNeuron.getSensitivity() && expectation) {
-                byte parentCharge = synapse.getParent().getCharge();
-                int correction = (int) Math.floor((127 - parentCharge));
-                synapse.addCorrection(correction);
-                error = 1;
+
+        layerIndex = this.layers.size() -1;
+        while (layerIndex >  -1) {
+            int neuronIndex = this.layers.get(layerIndex).getNeurons().size() - 1;
+            while (neuronIndex > -1) {
+                int synapseIndex = this.layers.get(layerIndex).getNeurons().get(neuronIndex).getChilds().size() - 1;
+                while (synapseIndex > -1) {
+                    this.layers.get(layerIndex).getNeurons().get(neuronIndex).getChilds().get(synapseIndex).activation();
+                    synapseIndex--;
+                }
+                neuronIndex--;
             }
-            if (outputNeuron.getCharge() > outputNeuron.getSensitivity() && !expectation) {
-                int correction = (int) Math.floor((0 - synapse.getParent().getCharge()));
-                synapse.addCorrection(correction);
-                error = 1;
-            }
+            layerIndex--;
         }
+//        System.out.printf("Network output: %d. %n", this.layers.get(this.layers.size() - 1).getNeurons().get(0).getOutput());
+        if (this.layers.get(this.layers.size() - 1).getNeurons().get(0).getOutput() > 0 && expectation) {
+            int synapseIndex = 0;
+            while (this.layers.get(this.layers.size() -1).getNeurons().get(0).getParents().size() > synapseIndex) {
+                this.layers.get(this.layers.size() -1).getNeurons().get(0).getParents().get(synapseIndex).addToCorrection(127);
+                synapseIndex++;
+            }
+            error = 1;
+        }
+
         return error;
     }
 

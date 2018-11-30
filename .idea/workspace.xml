@@ -2,33 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5ccb6a-afe4-4afa-88e4-e535b51ebbd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.attach_pid12023" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid12554" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid12604" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid12663" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid14313" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid14378" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid14444" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid14492" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid4393" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid7271" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid7321" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid7389" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid7507" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid7740" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid9428" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid9519" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.attach_pid9767" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural-network.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/artefact/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artefact/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artefact/app/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artefact/app/Layer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artefact/app/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artefact/app/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/artefact/app/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/artefact/app/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/artefact/app/NeuralNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/artefact/app/NeuralNetwork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/artefact/app/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/artefact/app/Neuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/artefact/app/Neuron.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/artefact/app/Synapse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/artefact/app/Synapse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/artefact/app/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/artefact/app/Utils.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,10 +36,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Layer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="225">
+              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -65,38 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
-              <folding>
-                <element signature="e#148#149#0" expanded="true" />
-                <element signature="e#177#178#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding>
-                <element signature="e#168#169#0" expanded="true" />
-                <element signature="e#200#201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Layer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-              <folding>
-                <element signature="e#214#215#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -104,10 +56,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state relative-caret-position="126">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#180#181#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,18 +95,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="465">
+              <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
               <folding>
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
-                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/AppTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -152,9 +129,11 @@
       <find>40</find>
       <find>39</find>
       <find>30</find>
+      <find>sensitivity</find>
     </findStrings>
     <replaceStrings>
       <replace>weight</replace>
+      <replace>bias</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -166,11 +145,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/artefact/micro-neural/NeuralNetwork.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/artefact/micro-neural/App.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/Layer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/artefact/app/App.java" />
       </list>
     </option>
@@ -210,6 +189,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,22 +198,68 @@
               <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
               <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-neural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-neural" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543216853537" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543540305268" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
@@ -275,6 +302,8 @@
       <updated>1543214117302</updated>
       <workItem from="1543214118899" duration="2531000" />
       <workItem from="1543219527999" duration="74514000" />
+      <workItem from="1543514943347" duration="12000" />
+      <workItem from="1543531410565" duration="8874000" />
     </task>
     <task id="LOCAL-00001" summary="conversion en projet maven">
       <created>1543215309506</created>
@@ -287,12 +316,43 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77045000" />
+    <option name="totallyTimeSpent" value="91638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1537" height="1212" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49913043" visible="true" weight="0.25262576" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913043" visible="true" weight="0.19140363" />
+      <window_info id="Structure" order="1" sideWeight="0.5008696" side_tool="true" weight="0.25262576" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997236" weight="0.3286908" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6511885" visible="true" weight="0.33426183" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.71428573" weight="0.32033426" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" weight="0.32900834" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291536" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.498618" weight="0.3291536" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.2857143" side_tool="true" weight="0.42397335" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49806523" weight="0.3286908" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32907993" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.25510204" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913043" weight="0.25262576" />
       <window_info id="Structure" order="1" sideWeight="0.5008696" side_tool="true" weight="0.25262576" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,8 +361,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997236" weight="0.3291536" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6511885" visible="true" weight="0.33437827" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.71428573" weight="0.32079414" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6511885" visible="true" weight="0.28840125" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.71428573" weight="0.38662487" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -316,12 +376,12 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.32946378" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.25510204" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -334,34 +394,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java</url>
-          <line>79</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/artefact/app/App.java</url>
+          <line>36</line>
           <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/neural-network.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/neural-network.json" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -369,13 +411,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///opt/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="656" selection-start-line="656" selection-end-line="656" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/app/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Layer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state relative-caret-position="225">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
           <folding>
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -389,48 +452,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Neuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="470">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
           <folding>
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/Synapse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/NeuralNetwork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#148#149#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/artefact/app/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
     </entry>

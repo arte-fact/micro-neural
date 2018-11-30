@@ -1,64 +1,37 @@
 package com.artefact.app;
 
-import java.util.ArrayList;
-
 public class Synapse {
     private Neuron child;
 
     private int batchSize = 1;
+    private int batchCorrectionSum = 0;
+    private Neuron parent;
+    private double weight;
 
-    public int getBatchSize() {
-        return batchSize;
+    Synapse(Neuron child, Neuron parent, double weight) {
+        this.child = child;
+        this.weight = weight;
+        this.parent = parent;
     }
 
-    private int batchCorrectionSum = 0;
-
-    public void addCorrection(int value) {
+    public void addToCorrection(int value) {
         this.batchSize++;
         this.batchCorrectionSum += value;
     }
 
+    public void activation() {
+        this.child.addToCharge((byte)(this.parent.getOutput() * this.weight));
+    }
+
     public void applyCorrection() {
-        int correction = (int) Math.floor(this.batchCorrectionSum / this.batchSize);
-        this.weight += Math.floor(correction);
-        for(Synapse parentSynapse: this.getParent().getParents()) {
-            if (parentSynapse.parent.getCharge() > parentSynapse.parent.getSensitivity()) {
-                parentSynapse.addCorrection(correction);
-//                parentSynapse.parent.setSensitivity((byte) (parentSynapse.parent.getSensitivity() - correction));
+        this.weight += (double) this.batchCorrectionSum / this.batchSize;
+//        System.out.printf("Synapse: correction %d. %n", this.batchCorrectionSum / this.batchSize);
+
+        for(Synapse parentSynapse: this.parent.getParents()) {
+            if (parentSynapse.parent.getOutput() > 0) {
+                parentSynapse.addToCorrection((byte) (parentSynapse.parent.getCharge() * 0.05));
             }
         }
     }
 
-    public Neuron getParent() {
-        return parent;
-    }
-
-    public void setParent(Neuron parent) {
-        this.parent = parent;
-    }
-
-    private Neuron parent;
-    private byte weight;
-
-    Synapse(Neuron child, Neuron parent, byte weight) {
-        this.child = child;
-        this.weight = weight;
-        this.parent = parent;
-    }
-
-    public Neuron getChild() {
-        return child;
-    }
-
-    public void setChild(Neuron child) {
-        this.child = child;
-    }
-
-    public byte getWeight() {
-        return weight;
-    }
-
-    public void setWeight(byte weight) {
-        this.weight = weight;
-    }
 }
